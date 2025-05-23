@@ -1,0 +1,22 @@
+# .gitignore
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Virtual env
+.venv/
+env/
+venv/
+
+# Data & metadata
+data/
+*.db
+
+# Packaging
+dist/
+build/
+*.egg-info
+
+# IDEs
+.vscode/
+.idea/
