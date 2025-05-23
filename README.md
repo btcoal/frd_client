@@ -90,11 +90,19 @@ frd_client/
 
 
 ## Installation
+
+From source:
+
 ```bash
-pip install frd_client
+git clone https://github.com/btcoal/frd_client.git
+cd frd_client
+pip install -r requirements.txt
+pip install .
 ```
 
 ## Usage
+
+### 1. Initialize
 ```python
 from pathlib import Path
 from frd_client.client import FrdClient
@@ -109,45 +117,6 @@ sched  = UpdateScheduler(client, meta)
 sched.run_daily()
 ```
 
-Below is a standalone **Markdown usage guide** you can drop into your `README.md` (or any docs page) under the project root:
-
-````markdown
-## Usage Guide
-
-### Installation
-
-Via PyPI:
-
-```bash
-pip install frd_client
-````
-
-Or from source:
-
-```bash
-git clone https://github.com/yourusername/frd_client.git
-cd frd_client
-pip install -r requirements.txt
-pip install .
-```
-
----
-
-### 1. Initialize the Library
-
-```python
-from pathlib import Path
-from frd_client.index import initialize
-
-# Replace with your FirstRate Data API user ID
-client, meta, scheduler = initialize(
-    userid="YOUR_USER_ID",
-    data_dir=Path("data")   # where all CSVs & metadata will live
-)
-```
-
----
-
 ### 2. Pull Updates
 
 You can run any or all of these:
@@ -160,8 +129,6 @@ scheduler.run_daily()
 scheduler.run_weekly()
 scheduler.run_monthly()
 ```
-
----
 
 ### 3. Loading Data into a DataFrame
 
