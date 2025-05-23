@@ -1,4 +1,7 @@
 # tests/test_index.py
+"""
+test_index.py – exercises `load_dataframe` against real CSV files
+"""
 import pytest
 import pandas as pd
 from pathlib import Path
